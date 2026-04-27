@@ -18,8 +18,6 @@ public class AppDbContext : DbContext {
             .HasForeignKey(n => n.CategoryId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        modelBuilder.Entity<Note>()
-        .HasIndex(n => n.Category);
 
         modelBuilder.Entity<Note>()
         .HasIndex(n => n.CreatedAt);
